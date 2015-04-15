@@ -1,2 +1,3 @@
 # codex
-The By Laws of code snippets
+The By Laws of code & snippets.
+My coding guildines & some resuable code. 
