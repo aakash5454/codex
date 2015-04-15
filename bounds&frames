@@ -1,0 +1,5 @@
+Getting the correct screen dimensions. 
+
+  CGRect screenRect = [[UIScreen mainScreen]bounds];
+  CGFloat screenWidth = screenRect.size.width;					//screenWidth 
+  CGFloat screenHeight = screenRect.size.height;				//screenHeight
