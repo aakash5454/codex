@@ -1,0 +1,10 @@
+Harrys Rule of Thumb 
+
+1) If you alloc, retain or copy = release, auto release 
+
+2) If you have to copy the same code again, make a function
+
+3) Reduce code dependenies 
+
+4) Try to avoid global variables, because they remain in memory and other file with same name global variable will
+cause memory ambiguity. 
