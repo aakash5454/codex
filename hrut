@@ -8,3 +8,11 @@ Harrys Rule of Thumb
 
 4) Try to avoid global variables, because they remain in memory and other file with same name global variable will
 cause memory ambiguity. 
+
+
+Other Conventions
+
+1) While naming variables make sure that they describe the content. Never go with names like, firstSetOfKeys, 
+secondDictionary etc, rather use, countryInformation, playerInformation etc. 
+
+2) Debugging: Analyze slowly. (Eg picker bug, of getting all keys rather the entire dictionary)
