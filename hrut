@@ -1,13 +1,17 @@
-Harrys Rule of Thumb 
+Rule of Thumb
 
 1) If you alloc, retain or copy = release, auto release 
 
 2) If you have to copy the same code again, make a function
 
-3) Reduce code dependenies 
+3) Reduce code coupling or code dependencies. Use protocols and delegations instead of making excessive use of inheritance. 
 
 4) Try to avoid global variables, because they remain in memory and other file with same name global variable will
 cause memory ambiguity. 
+
+5) Use string constants extern or string constants. 
+
+
 
 
 Other Conventions
@@ -15,4 +19,13 @@ Other Conventions
 1) While naming variables make sure that they describe the content. Never go with names like, firstSetOfKeys, 
 secondDictionary etc, rather use, countryInformation, playerInformation etc. 
 
-2) Debugging: Analyze slowly. (Eg picker bug, of getting all keys rather the entire dictionary)
+2) Debugging rules for dummies: 
+
+(a)Check the console messages.
+(b)Check the call stack
+(c)Check storyBoard Connections
+(d)Used Navigation Break points or Exception Break points 
+(e)Ok Google! check stackover flow threads 
+(f)Post the question/situation on stack Overflow
+(g)Make that call: Ask a senior developer 
+(h)You should be good by now, if not, its break time, perhaps a vacation trip.
