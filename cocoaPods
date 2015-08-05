@@ -1,0 +1,29 @@
+Every quick question in reference to cocoaPods: 
+
+Q:1) How to install cocoa pods?
+A:1) Open terminal,
+
+a) Download cocoaPods using commands: 
+
+  $ sudo gem install cocoapods
+  $ pod setup
+
+b) Navigate to your project folder using terminal and Create A PodFile and open it:
+
+  $ touch Podfile
+  $ open -a Xcode Podfile
+  
+c) Type in names of frameworks you are interested in  
+
+  source 'https://github.com/CocoaPods/Specs.git'
+  platform :ios, '7.0'
+  pod 'AFNetworking', '~> 2.5'  
+  pod 'Mantle', '~2.0'
+  
+d) Install Dependencies 
+
+  pod install
+  
+e) Close current Xcode project if open & Always use <YourProjectName>.xcworkspace
+
+  $ open <YourProjectName>.xcworkspace
