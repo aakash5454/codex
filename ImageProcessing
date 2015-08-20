@@ -1,0 +1,87 @@
+Image Processing in genreral: 
+This code usually goes in your CustomCell class: 
+
+Apple has various image view modes like Aspect Fit, Aspect Fill, Center, Scale to Fill, Scale to Fit and many more. 
+Aspect fit is the one you would want to mostly use because it keeps the images Aspect Ratio Intact. But the problem here is that usually this images will be in a feed in a table view or collection view and how do you manage the height and width of this images + then you have to adjust the size of cell based on the images. Try this. 
+
+Start by declaring the cell size: 
+
+cellHeight =  430;
+    
+    //Suppose there is a comment to display above the image: 
+    CGSize commentSize = [[AppDelegate  sharedAppDelegate]getDynamicHeightOflblWithAttributedString:lblComment];
+    
+    //Get the frame of Comment
+    CGRect frmLabel = lblComment.frame;
+    frmLabel.size.height = commentSize.height + 10;
+    lblComment.frame = frmLabel;
+    
+    //Add the comment height to cell Height (+ or - whatevere :|)
+    cellHeight = cellHeight + self.textViewComment.frame.size.height - 20;
+    
+    //Check if the image length > 0 
+    if([obj.reviewimage length]>0)
+    {
+    //Get Image Frame (imgComment is an imageView)
+        CGRect frmImage = imgComment.frame;
+        frmImage.origin.y = self.textViewComment.frame.size.height + self.textViewComment.frame.origin.y+11;
+        imgComment.frame = frmImage;
+      
+        //Check if the given image is landscape or Potrait & use the below logic to resize frame of image
+        if (imgComment.image.size.width > 0 && imgComment.image.size.height > 0) 
+        {
+            bool isLandscape = true;
+            float ratio = imgComment.image.size.width / imgComment.image.size.height;
+            if (imgComment.image.size.width <= imgComment.image.size.height) 
+            {
+                isLandscape = false;
+            }
+            if (isLandscape)
+            {
+                // imgComment.contentMode = UIViewContentModeScaleToFill;
+                CGRect frmimage = imgComment.frame;
+                frmimage.size.width = 280;
+                frmimage.size.height = frmimage.size.width /ratio;
+                frmimage.origin.x = (self.frame.size.width - frmimage.size.width )/2;
+                imgComment.frame = frmimage;
+                
+                //Adjust the cell height
+                cellHeight =  cellHeight - (230 - imgComment.frame.size.height);
+
+            }
+            else
+            {
+                // imgComment.contentMode = UIViewContentModeScaleToFill;
+                CGRect frmimage = imgComment.frame;
+                frmimage.size.height = 230;
+                frmimage.size.width = frmimage.size.width * ratio;
+                frmimage.origin.x = (self.frame.size.width - frmimage.size.width )/2;
+                imgComment.frame = frmimage;
+            }
+           
+        }
+        //Assume you a view below image, so adjust its frame based on resized image frame
+        CGRect bottomFrm = bottomView.frame;
+        bottomFrm.origin.y = imgComment.frame.size.height + imgComment.frame.origin.y + 10;
+        bottomView.frame = bottomFrm;
+
+    }
+    else
+    //for cells without image, i.e those with text & viewBelowImage
+    {
+        imgComment.hidden= YES;
+        CGRect frmImage = bottomView.frame;
+        frmImage.origin.y = self.textViewComment.frame.size.height + self.textViewComment.frame.origin.y + 1 ;
+        bottomView.frame = frmImage;
+        cellHeight = cellHeight - imgComment.frame.size.height - 10;
+        
+    }
+    //Dont care about this for now
+    CGRect bgFrm = bgView.frame;
+    bgFrm.size.height  = cellHeight - 5;
+    bgView.frame = bgFrm;
+
+Reference & more References:
+[1]http://stackoverflow.com/questions/4895272/difference-between-uiviewcontentmodescaleaspectfit-and-uiviewcontentmodescaletof
+
+[2]https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/instp/UIView/contentMode
