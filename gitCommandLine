@@ -1,0 +1,21 @@
+Basic git commands, every dev should know: 
+
+git branch      <Tell you the name of your current branch>
+
+git status      <Tell you all the right information>
+
+git diff        <Shows you what is different & all changes made>
+
+git add .       <add every change in current directory so you can commit>
+
+git add “FullyQualifiedfileName”   <Adds only the file names you specify>
+
+git commit -m “Enter commit message here”    <Commits & -m lets you enter the commit message>
+
+git push origin intoBranchName     <Pushes code into the branch name specified, from your current branch>
+
+git checkout ExistingBranchName    <to switch branches, just check them out>
+ 
+git checkout -b NewBrandname       <To create a new branch from currentBranch>
+
+git branch -d Task3                <to delete branch Task3>
