@@ -10,8 +10,10 @@ a) Download cocoaPods using commands:
 
 b) Navigate to your project folder using terminal and Create A PodFile and open it:
 
-  $ touch Podfile
-  $ open -a Xcode Podfile
+   $ pod init
+  or you can also do the below: 
+         $ touch Podfile
+         $ open -a Xcode Podfile
   
 c) Type in names of frameworks you are interested in  
 
