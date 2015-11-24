@@ -1,0 +1,15 @@
+So each company has it own rules, in my projects latley, I just follow this. 
+
+I am assuming you know theRuleNo1: each task/feature/bug you work on, has to have a ticket Number(else don't work)
+then
+Create a branch for that task/feature/bug with the ticket number and then start working. 
+
+Before making a pull request:
+1) Check for yourself(in sourcecontrol or commandline or wherever) the changes you made are valid things related 
+to that Ticket you are working on.
+2) Take care of code structuring, indenting and basic coding guidelines
+3) Make a pull request 
+4) Test, Test, Test & Test again 
+5) Analyze for the last time, how this code change will affect other apects of app
+6) Anticipate tentative question related to the pull request 
+7) Submit the pull request. 
