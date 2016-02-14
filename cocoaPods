@@ -29,3 +29,13 @@ d) Install Dependencies
 e) Close current Xcode project if open & Always use <YourProjectName>.xcworkspace
 
   $ open <YourProjectName>.xcworkspace
+
+=====>
+
+also when you need to add the pod in Podfile and do pod install from terminal:
+
+(1)In terminal change the directory to your project directory containing *.xcodeproj
+(2)Run open Podfile. Which opens the Podfile in textEdit.
+(3)Add pod'CorePlot', '~> 1.4' to it and save.
+(4)Run pod install -- NOTE* that is **pod update if already installed.
+
