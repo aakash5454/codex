@@ -4,6 +4,7 @@ Almost everytime I am asked to fix something that works well on my side but does
 report the bugs the way they are supposed to & we believe "If it ain't broke, don't fix it" ;)
 
 Platform: 
+Build Details: 
 Device: 
 Operating System: 
 Reproducibility: 
@@ -19,6 +20,7 @@ QA Notes:
 Details that go in a bug: 
 
 Platform: (Can be iOS/Android)
+Build Details: (Can be build number, version number)
 Device: (iPhone5 JailBroke/Galaxy S)
 OS: (10.1.3/5.2)
 Reproducibility: (Mention the number of times like 5/5 times. 1/5 times etc)
@@ -33,6 +35,7 @@ QA Notes: (Any addition information that does not fall in the above bucket)
 Example: Sample bug reported to Login: 
 
 Platform: iOS only 
+Build Details: 1.2.1 Hockey App 
 Device: iPhone7 
 Operating System: 10.0.1 
 Reproducibility: 5 out of 5 times 
