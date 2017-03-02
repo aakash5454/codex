@@ -1,0 +1,6 @@
+Basic Imports: 
+import Foundation 
+import Swift 
+
+Read from Console: 
+let inputString = readLine()! // get a line of input from stdin and save it to our variable
