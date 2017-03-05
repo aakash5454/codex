@@ -4,3 +4,23 @@ import Swift
 
 Read from Console: 
 let inputString = readLine()! // get a line of input from stdin and save it to our variable
+
+// Declare second integer, double, and String variables.
+
+let secondInteger: Int?
+let secondDouble: Double?
+let secondString: String?
+
+// Read and save an integer, double, and String to your variables.
+
+let temp1 = readLine()
+secondInteger = Int(temp1!)
+
+let temp2 = readLine()
+secondDouble = Double (temp2!)
+
+secondString = readLine()!
+
+// Print the sum of both integer variables on a new line.
+
+print(i + secondInteger!, terminator: "\n")
